@@ -67,6 +67,25 @@ function selectBox(boxNumber){
     checkForWinner()
 }
 
+function resetBoard(){
+    board.fill(-1);
+    renderBoard();
+
+    currentPlayer = 'X';
+    const currentPlayerEle = document.getElementById("currentPlayer");
+    currentPlayerEle.innerText = currentPlayer;
+}
+
+function isPlayerPresent(places, player){
+    let result = true;
+    places.forEach((place) => {
+        if(board[place] != player){
+            result = false;
+        }
+    })
+    return result;
+}
+
     </script>
 </body>
 </html>
