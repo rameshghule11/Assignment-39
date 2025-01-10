@@ -46,6 +46,27 @@ function renderBoard(){
     })
 }
 renderBoard()
+
+function selectBox(boxNumber){
+    if(board[boxNumber] !== -1){
+        alert("Invalid Move...")
+        return;
+    }
+    board[boxNumber] = currentPlayer;
+    renderBoard();
+
+    if(currentPlayer === "X"){
+        currentPlayer = "O";
+    }else{
+        currentPlayer = "X";
+    }
+
+    const currentPlayerEle = document.getElementById("currentPlayer");
+    currentPlayerEle.innerText = currentPlayer;
+
+    checkForWinner()
+}
+
     </script>
 </body>
 </html>
