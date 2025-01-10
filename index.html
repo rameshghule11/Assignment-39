@@ -86,6 +86,24 @@ function isPlayerPresent(places, player){
     return result;
 }
 
+function checkForWinner(){
+    if(isPlayerPresent([0,1,2], "O")){
+        alert("Player O wins");
+    }else if(isPlayerPresent([3,4,5], "O")){
+        alert("Player O wins");
+    }else if(isPlayerPresent([6,7,8], "O")){
+        alert("Player O wins");
+    }else if(isPlayerPresent([0,3,6], "O")){
+        alert("Player O wins");
+    }else if(isPlayerPresent([1,4,7], "O")){
+        alert("Player O wins");
+    }else if(isPlayerPresent([2,5,6], "O")){
+        alert("Player O wins");
+    }else if(isPlayerPresent([0,4,8], "O")){
+        alert("Player O wins");
+    }else if(isPlayerPresent([2,4,6], "O")){
+        alert("Player O wins");
+    }
     </script>
 </body>
 </html>
