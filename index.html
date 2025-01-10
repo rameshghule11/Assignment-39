@@ -27,5 +27,25 @@
         </div>
     </div>
     <button class="reset-btn" onclick="resetBoard()">Reset Game</button>
+
+    <script>
+         const board = [-1, -1, -1, -1, -1, -1, -1, -1, -1];
+let currentPlayer = "X";
+
+function renderBoard(){
+    const allBoxes = document.querySelectorAll('.box');
+    
+    allBoxes.forEach((boxElement, i) => {
+        if(board[i] === 'O'){
+            boxElement.innerHTML = '<img src="./images/o.png" class="img">';
+        }else if(board[i] === 'X'){
+            boxElement.innerHTML = '<img src="./images/x.png" class="img">';
+        }else{
+            boxElement.innerHTML = '';
+        }
+    })
+}
+renderBoard()
+    </script>
 </body>
 </html>
